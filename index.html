@@ -1,0 +1,143 @@
+<html>
+
+<head>
+	<meta charSet="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="description" content="Chegou?" />
+	<meta itemProp="name" content="O pc da tiba ja chegou?" />
+	<meta itemProp="description" content="Chegou?" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="O pc da tiba ja chegou?" />
+	<meta name="twitter:description" content="Chegou?" />
+	<meta property="og:title" content="O pc da tiba ja chegou?" />
+	<meta property="og:description" content="Chegou?" />
+	<meta property="og:url" content="http://opcdatibajachegouem.casa" />
+	<meta property="og:site_name" content="O pc da tiba ja chegou?" />
+	<meta property="og:type" content="website" />
+	<meta name="theme-color" content="#1E1F29" />
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="true" />
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400|Rubik:900&amp;display=swap"
+		as="style" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400|Rubik:900&amp;display=swap" />
+	<meta name="viewport" content="width=device-width" />
+	<meta charSet="utf-8" />
+	<style>
+		html {
+			box-sizing: border-box;
+			font-size: 62.5%;
+		}
+
+		body,
+		html {
+			height: 100%
+		}
+
+		body {
+			font-size: 1.4rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			background-color: pink;
+		}
+
+		*,
+		:after,
+		:before {
+			box-sizing: inherit
+		}
+
+		ol,
+		ul {
+			padding: 0;
+			list-style-type: none
+		}
+
+		blockquote,
+		body,
+		dd,
+		dl,
+		figure,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		hr,
+		li,
+		ol,
+		p,
+		pre,
+		ul {
+			margin: 0;
+			line-height: 1em
+		}
+
+
+		.wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0
+		}
+
+		.aligner {
+			margin: 4rem
+		}
+
+		.item {
+			align-self: center;
+			margin: auto;
+			text-align: center
+		}
+
+
+		#text {
+			text-transform: uppercase
+		}
+
+		#text {
+			font: 900 6rem/6rem Rubik, sans-serif;
+			color: #111
+		}
+
+		@media (min-width:800px) {
+			.tagline {
+				font: 300 3rem/2.8rem Roboto Mono, monospace
+			}
+
+			#text {
+				font: 900 9rem/8.5rem Rubik, sans-serif
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="__next">
+		<div class="wrapper false">
+			<div class="aligner">
+				<div class="item">
+					<h2 id="text">...</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var sayNo = false;
+		var yeps = ["YES", "IT ACTUALLY ARRIVED", "OMG I THINK SO", "IT DID", "YEP", "YAAAAAS"]
+		var nopes = ["NO", "NO WAY", "NOT YET", "MAYBE? (NO.)", "DON'T THINK SO", "HAH, YEAH RIGHT", "NOOOOOOPE", "NOPE", "DID YOU REALLY THINK SO?"]
+		var txtHolder = document.getElementById("text");
+		var answerArray = sayNo ? nopes : yeps;
+		var randomAnswerIndex = Math.floor(Math.random() * answerArray.length)
+		txtHolder.innerText = answerArray[randomAnswerIndex] + (Math.random() > 0.5 ? "!" : "");
+	</script>
+</body>
+
+</html>
