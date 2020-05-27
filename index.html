@@ -38,7 +38,7 @@
 	<style>
 		html {
 			box-sizing: border-box;
-			font-size: 62.5%;
+			font-size: 62.5%
 		}
 
 		body,
@@ -88,6 +88,12 @@
 			line-height: 1em
 		}
 
+		a:active,
+		a:focus,
+		a:hover {
+			outline: none;
+			color: #000
+		}
 
 		.wrapper {
 			display: flex;
@@ -111,14 +117,73 @@
 			text-align: center
 		}
 
+		.tagline {
+			font: 300 2rem/2.5rem Roboto Mono, monospace;
+			margin-bottom: 1em;
+			color: #666;
+			padding: 14px 0 13px
+		}
 
-		#text {
+		#text,
+		.tagline {
 			text-transform: uppercase
 		}
 
 		#text {
 			font: 900 6rem/6rem Rubik, sans-serif;
 			color: #111
+		}
+
+		.meta {
+			text-align: center;
+			position: absolute;
+			bottom: 1em;
+			width: 100%;
+			left: 0;
+			font: 300 1rem/1.25rem Roboto Mono, monospace
+		}
+
+		#reload {
+			display: inline-block;
+			font: 300 1.5rem/1.5rem Roboto Mono, monospace;
+			border: 0;
+			background: transparent;
+			cursor: pointer;
+			text-decoration: none;
+			color: #ddd;
+			margin-top: 4rem;
+			outline: none
+		}
+
+		ul.footer-list {
+			list-style: none;
+			padding: 0;
+			display: inline-flex
+		}
+
+		ul.footer-list li {
+			display: inline-block;
+			color: #222;
+			margin: 0 .25rem
+		}
+
+		ul.footer-list a {
+			color: #777
+		}
+
+		ul.footer-list .sr-only {
+			position: absolute;
+			clip: rect(1px 1px 1px 1px);
+			clip: rect(1px, 1px, 1px, 1px);
+			padding: 0;
+			border: 0;
+			height: 1px;
+			width: 1px;
+			overflow: hidden
+		}
+
+		ul.footer-list select {
+			max-width: 110px
 		}
 
 		@media (min-width:800px) {
@@ -130,6 +195,23 @@
 				font: 900 9rem/8.5rem Rubik, sans-serif
 			}
 		}
+
+		.its-friday {
+			background-color: #ff4136
+		}
+
+		.its-friday .tagline {
+			color: #fff
+		}
+
+		.its-friday #reload,
+		.its-friday .footer-list li {
+			color: #ff9089
+		}
+
+		.its-friday .footer-list a {
+			color: #b30a00
+		}
 	</style>
 </head>
 
@@ -138,6 +220,7 @@
 		<div class="wrapper false">
 			<div class="aligner">
 				<div class="item">
+					<h3 class="tagline">Pc da Tiba ja chegou?</h3>
 					<h2 id="text">...</h2>
 				</div>
 			</div>
@@ -145,8 +228,8 @@
 	</div>
 	<script>
 		var sayNo = true;
-		var yeps = ["YES", "IT ACTUALLY ARRIVED", "OMG I THINK SO", "IT DID", "YEP", "YAAAAAS"]
-		var nopes = ["NO", "NO WAY", "NOT YET", "MAYBE? (NO.)", "DON'T THINK SO", "HAH, YEAH RIGHT", "NOOOOOOPE", "NOPE", "DID YOU REALLY THINK SO?"]
+		var yeps = ["SIM", "CHEGOOOOU", "YES", "IT ACTUALLY ARRIVED", "OMG I THINK SO", "IT DID", "YEP", "YAAAAAS"]
+		var nopes = ["NÃO", "AINDA NÃO", ":(", "NO", "NO WAY", "NOT YET", "MAYBE? (NO.)", "DON'T THINK SO", "HAH, YEAH RIGHT", "NOOOOOOPE", "NOPE", "DID YOU REALLY THINK SO?"]
 		var txtHolder = document.getElementById("text");
 		var answerArray = sayNo ? nopes : yeps;
 		var randomAnswerIndex = Math.floor(Math.random() * answerArray.length)
